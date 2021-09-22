@@ -26,16 +26,14 @@
         </li>
 
         <li class='nav-item dropdown dropdown-slide'>
-          <%= link_to '#' do %>
-            <div class='nav-link' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false' id='header-profile'>
-              <%= image_tag 'sample', size: '40x40', class: 'rounded-circle mr15' %>
-            </div>
-          <% end %>
+          <a class='nav-link' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false' id='header-profile'>
+            <%= image_tag 'sample', size: '40x40', class: 'rounded-circle mr15' %>
+          </a>
           <div class='dropdown-menu dropdown-menu-right'>
             <div class='dropdown-item'>らんてっく たろう</div>
             <div class='dropdown-divider'></div>
             <%= link_to 'プロフィール', '#', class: 'dropdown-item' %>
-            <%= link_to 'ログアウト', '#', class: 'dropdown-item' %>
+            <%= link_to 'ログアウト', logout_path, class: 'dropdown-item', method: :delete %>
           </div>
         </li>
       </ul>
