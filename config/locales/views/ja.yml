@@ -1,0 +1,31 @@
+ja:
+  defaults:
+    login: 'ログイン'
+    register: '登録'
+    logout: 'ログアウト'
+  users:
+    index:
+      title: 'ユーザー一覧'
+      to_register_page: '登録ページへ'
+    new:
+      titile: 'ユーザー登録'
+      to_login_page: 'ログインページへ'
+    create:
+      success: 'ユーザーを登録しました'
+      fail: 'ユーザー登録に失敗しました'
+    update:
+      success: 'ユーザーを更新しました'
+      fail: 'ユーザーを削除しました'
+    destroy:
+      success: 'ユーザー削除に成功しました'
+  user_sessions:
+    new:
+      title: 'ログイン'
+      to_register_page: '登録ページへ'
+      password_forget: 'パスワードをお忘れの方はこちら'
+    create:
+      success: 'ログインしました'
+      fail: 'ログインに失敗しました'
+    destroy:
+      success: 'ログアウトしました'
+

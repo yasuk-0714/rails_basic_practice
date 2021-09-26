@@ -26,10 +26,10 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
-    binding.pry
     if @user.save
-      redirect_to login_path
+      redirect_to login_path, success: t('.success')
     else
+      flash.now[:danger] = t('.fail')
       render 'new'
     end
   end
@@ -37,12 +37,11 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
-    respond_to do |format|
-      if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
-      else
-        format.html { render :edit }
-      end
+    if @user.update(user_params)
+      redirect_to @user, success: t('.success')
+    else
+      flash.now[:fail] = t('.fail')
+      render :edit
     end
   end
 
@@ -50,10 +49,7 @@ class UsersController < ApplicationController
   # DELETE /users/1.json
   def destroy
     @user.destroy
-    respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to users_path, success: t('.success')
   end
 
   private
