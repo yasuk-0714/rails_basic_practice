@@ -1,0 +1,16 @@
+ja:
+  users:
+    create:
+      success: 'ユーザーを登録しました'
+      fail: 'ユーザー登録に失敗しました'
+    update:
+      success: 'ユーザーを更新しました'
+      fail: 'ユーザーを削除しました'
+    destroy:
+      success: 'ユーザー削除に成功しました'
+  user_sessions:
+    create:
+      success: 'ログインしました'
+      fail: 'ログインに失敗しました'
+    destroy:
+      success: 'ログアウトしました'

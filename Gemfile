@@ -37,6 +37,7 @@ gem 'jquery-rails'
 gem 'font-awesome-sass'
 gem 'sorcery'
 gem 'pry-rails'
+gem 'rails-i18n', '~> 5.1'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
