@@ -38,6 +38,7 @@ gem 'font-awesome-sass'
 gem 'sorcery'
 gem 'pry-rails'
 gem 'rails-i18n', '~> 5.1'
+gem 'draper'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
