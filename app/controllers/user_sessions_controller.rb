@@ -10,7 +10,7 @@ class UserSessionsController < ApplicationController
     if @user
       redirect_to root_path, success: t('.success')
     else
-      flash.now[:alert] = t('.fail')
+      flash.now[:danger] = t('.fail')
       render 'new'
     end
   end

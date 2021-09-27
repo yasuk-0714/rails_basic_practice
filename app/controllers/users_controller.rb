@@ -40,7 +40,7 @@ class UsersController < ApplicationController
     if @user.update(user_params)
       redirect_to @user, success: t('.success')
     else
-      flash.now[:fail] = t('.fail')
+      flash.now[:danger] = t('.fail')
       render :edit
     end
   end
